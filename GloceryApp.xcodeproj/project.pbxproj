@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1864C6472E3C8C6F001076AD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1864C6462E3C8C6F001076AD /* RealmSwift */; };
+		1864C6482E3C8D99001076AD /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 1864C6462E3C8C6F001076AD /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		1864C6042E3B9628001076AD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -23,6 +28,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1864C63F2E3B9D31001076AD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1864C6482E3C8D99001076AD /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1864C5F32E3B9626001076AD /* GloceryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GloceryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1864C6032E3B9628001076AD /* GloceryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GloceryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,11 +49,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		1864C5F52E3B9626001076AD /* GloceryApp */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = GloceryApp;
-			sourceTree = "<group>";
-		};
 		1864C6062E3B9628001076AD /* GloceryAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = GloceryAppTests;
@@ -45,6 +59,11 @@
 			path = GloceryAppUITests;
 			sourceTree = "<group>";
 		};
+		1864C6772E3CE4F9001076AD /* GloceryApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GloceryApp;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1864C6472E3C8C6F001076AD /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +95,10 @@
 		1864C5EA2E3B9626001076AD = {
 			isa = PBXGroup;
 			children = (
-				1864C5F52E3B9626001076AD /* GloceryApp */,
+				1864C6772E3CE4F9001076AD /* GloceryApp */,
 				1864C6062E3B9628001076AD /* GloceryAppTests */,
 				1864C6102E3B9628001076AD /* GloceryAppUITests */,
+				1864C63B2E3B9D31001076AD /* Frameworks */,
 				1864C5F42E3B9626001076AD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +113,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1864C63B2E3B9D31001076AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,16 +130,18 @@
 				1864C5EF2E3B9626001076AD /* Sources */,
 				1864C5F02E3B9626001076AD /* Frameworks */,
 				1864C5F12E3B9626001076AD /* Resources */,
+				1864C63F2E3B9D31001076AD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				1864C5F52E3B9626001076AD /* GloceryApp */,
+				1864C6772E3CE4F9001076AD /* GloceryApp */,
 			);
 			name = GloceryApp;
 			packageProductDependencies = (
+				1864C6462E3C8C6F001076AD /* RealmSwift */,
 			);
 			productName = GloceryApp;
 			productReference = 1864C5F32E3B9626001076AD /* GloceryApp.app */;
@@ -195,6 +225,9 @@
 			);
 			mainGroup = 1864C5EA2E3B9626001076AD;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1864C6452E3C8C6F001076AD /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1864C5F42E3B9626001076AD /* Products */;
 			projectDirPath = "";
@@ -552,6 +585,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1864C6452E3C8C6F001076AD /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1864C6462E3C8C6F001076AD /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1864C6452E3C8C6F001076AD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1864C5EB2E3B9626001076AD /* Project object */;
 }
