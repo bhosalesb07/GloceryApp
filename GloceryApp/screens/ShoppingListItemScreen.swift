@@ -30,14 +30,21 @@ struct ShoppingListItemScreen: View {
             }
             List{
                 ForEach(item){ items in
-                    ShoppingItemCell(item: items, selected: selectedItemIds.contains(items.id)) { selected in
-                        if selected{
-                            selectedItemIds.append(items.id)
-                            if let indextoDelete = shoppingList.items.firstIndex(where: {$0.id == items.id}){
-                                $shoppingList.items.remove(at: indextoDelete)
+                    
+                    NavigationLink {
+                        AddShoppingListItemScreen(shoppingList: shoppingList, itemtoEdit:items)
+                    } label: {
+                        ShoppingItemCell(item: items, selected: selectedItemIds.contains(items.id)) { selected in
+                            if selected{
+                                selectedItemIds.append(items.id)
+                                if let indextoDelete = shoppingList.items.firstIndex(where: {$0.id == items.id}){
+                                    $shoppingList.items.remove(at: indextoDelete)
+                                }
                             }
                         }
                     }
+
+                   
                 }.onDelete(perform: $shoppingList.items.remove)
             }
             .navigationTitle(shoppingList.title)
